@@ -90,7 +90,18 @@ local Indicator
         loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Script.lua"))()
 
     end)
+   
 
+    -- murder party
+
+
+    local MainSection = Main:NewSection("Murder Party 🎉")
+
+    MainSection:NewButton("ReWritter", "Gives you a good gaming chair.", function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/artas01/artas01/c50dad68804d1656a15f5357f9333daa4a4f15af/MurderParty_bylolProplayerlol'))()
+
+    end)
     
 
     -- Hood Customs
