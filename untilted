@@ -19,7 +19,7 @@ local InfiniteJumpEnabled = true
     -- BEDWARS
 
 
-    local MainSection = Main:NewSection("BedWars ⎯ 🏹")
+    local MainSection = Main:NewSection("BedWars 🏹")
 
 
 
