@@ -145,7 +145,7 @@ local InfiniteJumpEnabled = true
 
     
 
-    PlayerSection:NewButton("Fly", "ToggleInfo", function(s)
+    PlayerSection:NewButton("Fly [X]", "ToggleInfo", function(s)
  fly_ThisCanBeNamedAnything(true)
 end)
 
