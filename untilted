@@ -1,6 +1,80 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("☄️ ent's hub", "DarkTheme")
+local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub", "BloodTheme")
+    -- MAIN
+    local Main = Window:NewTab("Main")
 
---main
-local Tab = Window:NewTab("MAIN")
-local Section = Tab:NewSection("Section Name")
+    --bedwars
+
+    local MainSection = Main:NewSection("BedWars 🏹")
+
+
+    MainSection:NewButton("Vape", "Gives you a good gaming chair.", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    end)
+    
+    --mm2
+
+    local MainSection = Main:NewSection("Murder Mystery 2 🗡️")
+
+    MainSection:NewButton("Eclipse", "Gives you a good gaming chair.", function()
+        local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()    end)
+
+    --dahood
+
+    local MainSection = Main:NewSection("Da Hood 💗")
+
+
+    MainSection:NewButton("Swagmode", "Gives you a good gaming chair.", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+
+    end)
+
+    --psx
+
+
+    local MainSection = Main:NewSection("Pet Simulator X 🐾")
+
+
+    MainSection:NewButton("Milk Up", "Gives you a good gaming chair.", function()
+        loadstring(game:HttpGet("https://MilkUp.info/script"))()
+    end)
+ 
+        --arsneal
+
+        local MainSection = Main:NewSection("Arsenal 🔫")
+
+        MainSection:NewButton("VG Hub", "Gives you a good gaming chair.", function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+        end)
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("[❌] Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+
+
+    --Other
+    local Other = Window:NewTab("[❌]Other")
+    local OtherSection = Other:NewSection("Other")
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+    OtherSection:NewButton("Bypassed Fly", "bird mode", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+        Fly(true)
+    end)
