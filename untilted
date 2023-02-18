@@ -90,7 +90,15 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
     
     PlayerSection:NewToggle("Fly", "ToggleInfo", function(state)
     if state then
-        mouse = game.Players.LocalPlayer:GetMouse()
+        fly_ThisCanBeNamedAnything(true)
+    else
+        fly_ThisCanBeNamedAnything(false)
+    end
+end)
+
+PlayerSection:NewToggle("Click TP", "ToggleInfo", function(state)
+    if state then
+                mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
 tool.Name = "Equip to Click TP"
@@ -100,14 +108,6 @@ pos = CFrame.new(pos.X,pos.Y,pos.Z)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
-    else
-        fly_ThisCanBeNamedAnything(false)
-    end
-end)
-
-PlayerSection:NewToggle("Click TP", "ToggleInfo", function(state)
-    if state then
-        print("Toggle On")
     else
         print("Toggle Off")
     end
