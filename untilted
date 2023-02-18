@@ -5,7 +5,7 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
 
     --bedwars
 
-    local MainSection = Main:NewSection("BedWarss 🏹")
+    local MainSection = Main:NewSection("BedWars 🏹")
 
 
     MainSection:NewButton("Vape", "Gives you a good gaming chair.", function()
