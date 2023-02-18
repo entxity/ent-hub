@@ -46,7 +46,7 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
     local MainSection = Main:NewSection("Jailbreak 🕌")
 
 
-    MainSection:NewButton("Jailbreak", "Gives you a good gaming chair.", function()
+    MainSection:NewButton("Vynixius", "Gives you a good gaming chair.", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Script.lua"))()
     end)
  
