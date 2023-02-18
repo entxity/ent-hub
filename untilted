@@ -71,6 +71,7 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
     
     
     local Player = Window:NewTab("[❌] Player")
+    local PlayerSection = Player:NewSection("Player")
 
 
     PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
