@@ -1,8 +1,6 @@
 local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub", "BloodTheme")
-local lp = game:GetService "Players".LocalPlayer
-local InfiniteJumpEnabled = true
 
 
 
@@ -128,5 +126,6 @@ end)
 
 
     
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp'),true))()
 
     
