@@ -1,5 +1,7 @@
+local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub", "BloodTheme")
+
     -- MAIN
     local Main = Window:NewTab("Main")
 
@@ -85,7 +87,16 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end)
+    
+    local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))()
 
+PlayerSection:NewToggle("ent's fly", "ToggleInfo", function(state)
+    if state then
+        fly_ThisCanBeNamedAnything(true)
+    else
+        fly_ThisCanBeNamedAnything(false)
+    end
+end)
 
     --Other
     local Other = Window:NewTab("[❌]Other")
@@ -100,3 +111,4 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
 
         Fly(true)
     end)
+    
