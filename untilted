@@ -88,13 +88,28 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end)
     
-    local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))()
-
-PlayerSection:NewToggle("ent's fly", "ToggleInfo", function(state)
+    PlayerSection:NewToggle("Fly", "ToggleInfo", function(state)
     if state then
-        fly_ThisCanBeNamedAnything(true)
+        mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Equip to Click TP"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
     else
         fly_ThisCanBeNamedAnything(false)
+    end
+end)
+
+PlayerSection:NewToggle("Click TP", "ToggleInfo", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
     end
 end)
 
