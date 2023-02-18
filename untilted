@@ -38,6 +38,18 @@ local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub"
     MainSection:NewButton("Milk Up", "Gives you a good gaming chair.", function()
         loadstring(game:HttpGet("https://MilkUp.info/script"))()
     end)
+    
+        --psx
+
+         ---jb
+
+    local MainSection = Main:NewSection("Jailbreak 🕌")
+
+
+    MainSection:NewButton("Jailbreak", "Gives you a good gaming chair.", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Script.lua"))()
+    end)
+ 
  
         --arsneal
 
