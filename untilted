@@ -113,6 +113,13 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
     end)
+    
+     PlayerSection:NewButton("Infinite Jump", "Resets to all defaults", function()
+ game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
 
     --Other
     local Other = Window:NewTab("[❌]Other")
@@ -120,13 +127,10 @@ tool.Parent = game.Players.LocalPlayer.Backpack
     
 
 
-        OtherSection:NewToggle("Infinite Jump", "ToggleInfo", function(state)
-    if InfiniteJumpEnabled then
-        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-    else then
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-    end
+ game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
 end)
-    
 
     
