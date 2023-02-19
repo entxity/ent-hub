@@ -135,7 +135,7 @@ local Indicator
 	        -- ER:LC
 
 
-        local MainSection = Main:NewSection("ER:LC 🫠")
+        local MainSection = Main:NewSection("[PATCHED] ER:LC 🚓")
 
 
         MainSection:NewButton("Auto Solver", "Gives you a good gaming chair.", function()
