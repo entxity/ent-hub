@@ -5,7 +5,7 @@ local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubus
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 --window
-local Window = Library.CreateLib("🥶 cau mans nigger! script-ware, synapse x ON TOP! ☄️ ", "BloodTheme")
+local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub | i 💕 exploits", "BloodTheme")
 
 local lp = game:GetService "Players".LocalPlayer
 --infinite jump
