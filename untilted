@@ -5,7 +5,7 @@ local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubus
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 --window
-local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub | 👻 last updated: 19/02/2022", "BloodTheme")
+local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub | 👻 version: 19/02/2022", "BloodTheme")
 
 local lp = game:GetService "Players".LocalPlayer
 --infinite jump
@@ -131,7 +131,30 @@ local Indicator
             loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 
         end)
+	
+	        -- ER:LC
 
+
+        local MainSection = Main:NewSection("ER:LC 🫠")
+
+
+        MainSection:NewButton("Auto Solver", "Gives you a good gaming chair.", function()
+
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/PrintedScript/projects/main/erlc.lua'))()
+
+        end)
+	
+	        MainSection:NewButton("Car Speed", "Gives you a good gaming chair.", function()
+
+            loadstring(game:HttpGet("https://rawscripts.net/raw/Emergency-Response:-Liberty-County-Car-Boost-Cheat-4590"))()
+
+        end)
+	
+	 MainSection:NewButton("Invisable", "Gives you a good gaming chair.", function()
+
+      game.Players.LocalPlayer.Character:FindFirstChild("LowerTorso"):FindFirstChild("Root"):Destroy()
+      
+      end)
 
 
     -- L O C A L  P L A Y E R  S E C T I O N
