@@ -497,3 +497,11 @@ end)
         loadstring(game:HttpGet(('https://pastebin.com/raw/XrH9yKpi'),true))()
         
         end)
+	
+	         OtherSection:NewButton("🟡 Coming Soon | Anti-AFK", "Gives you a good gaming chair.", function()
+
+        loadstring(game:HttpGet(('https://pastebin.com/raw/llllllllll'),true))()
+        
+        end)
+	
+	
