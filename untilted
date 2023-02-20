@@ -316,6 +316,6 @@ end)
 
         OtherSection:NewButton("Universal ESP", "Gives you a good gaming chair.", function()
 
-        loadstring(game:HttpGet(('https://pastebin.com/XrH9yKpi'),true))()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/XrH9yKpi'),true))()
 
      end)
