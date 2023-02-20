@@ -194,7 +194,7 @@ local Indicator
  
 end)
 
-PlayerSection:NewButton("Noclip [E]", "ToggleInfo", function(s)
+PlayerSection:NewButton("Noclip", "ToggleInfo", function(s)
     
     function noclip()
 	Clip = false
