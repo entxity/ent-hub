@@ -311,8 +311,6 @@ end)
         OtherSection:NewButton("Universal Aimlock", "Gives you a good gaming chair.", function()
 
         loadstring(game:HttpGet(('https://pastebin.com/raw/mYJrhM1E'),true))()
-	
-	https://pastebin.com/XrH9yKpi
 
      end)
 
