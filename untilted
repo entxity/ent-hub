@@ -12,7 +12,8 @@ local lp = game:GetService "Players".LocalPlayer
 --infinite jump
 local InfiniteJumpEnabled = true
 --NOCLIP
-local StealthMode = true -- If game has an anticheat that checks the logs  
+local Noclip = nil
+local Clip = nil
 
 local Indicator
 
@@ -195,80 +196,27 @@ end)
 
 PlayerSection:NewButton("Noclip [E]", "ToggleInfo", function(s)
     
-    if not StealthMode then
-        local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
-        print("NOCLIP: Press E to Activate")
-        Indicator = Instance.new("TextLabel", ScreenGui)
-        Indicator.AnchorPoint = Vector2.new(0, 1)
-        Indicator.Position = UDim2.new(0, 0, 1, 0)
-        Indicator.Size = UDim2.new(0, 200, 0, 50)
-        Indicator.BackgroundTransparency = 1
-        Indicator.TextScaled = true
-        Indicator.TextStrokeTransparency = 0
-        Indicator.TextColor3 = Color3.new(0, 0, 0)
-        Indicator.TextStrokeColor3 = Color3.new(1, 1, 1)
-        Indicator.Text = "Noclip: Enabled"
-    end
-    
-    local noclip = false
-    local player = game.Players.LocalPlayer
-    local character = player.Character or player.CharacterAdded:Wait()
-    
-    local mouse = player:GetMouse()
-    
-    mouse.KeyDown:Connect(function(key)
-        if key == "e" then
-            noclip = not noclip
-    
-            if not StealthMode then
-                Indicator.Text = "Noclip: " .. (noclip and "Enabled" or "Disabled")
-            end
-        end
-    end)
-    
-    while true do
-        player = game.Players.LocalPlayer
-        character = player.Character
-    
-        if noclip then
-            for _, v in pairs(character:GetDescendants()) do
-                pcall(function()
-                    if v:IsA("BasePart") then
-                        v.CanCollide = false
-                    end
-                end)
-            end
-        end
-    
-        game:GetService("RunService").Stepped:wait()
-    end
+    function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
 
-end)
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
 
-
-    PlayerSection:NewButton("Click TP", "Resets to all defaults", function()
-
-mouse = game.Players.LocalPlayer:GetMouse()
-
-tool = Instance.new("Tool")
-
-tool.RequiresHandle = false
-
-tool.Name = "Equip to Click TP"
-
-tool.Activated:connect(function()
-
-local pos = mouse.Hit+Vector3.new(0,2.5,0)
-
-pos = CFrame.new(pos.X,pos.Y,pos.Z)
-
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
-
-end)
-
-tool.Parent = game.Players.LocalPlayer.Backpack
-
-    end)
+noclip() -- to toggle noclip() and clip()
 
     
     PlayerSection:NewButton("Infinite Jump", "Resets to all defaults", function()
