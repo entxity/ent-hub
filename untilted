@@ -6,7 +6,7 @@ local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubus
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 --window
-local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub | 👻 version: 19/02/2022", "BloodTheme")
+local Window = Library.CreateLib("🏷️ welcome! | ☄️ @ent's & @davis hub | 👻 version: 20/02/2022", "BloodTheme")
 
 local lp = game:GetService "Players".LocalPlayer
 --infinite jump
@@ -305,5 +305,11 @@ end)
          OtherSection:NewButton("Chat Bypasser Synapse X", "Gives you a good gaming chair.", function()
 
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp'),true))()
+
+     end)
+     
+        OtherSection:NewButton("Universal Aimlock", "Gives you a good gaming chair.", function()
+
+        loadstring(game:HttpGet(('https://pastebin.com/raw/mYJrhM1E'),true))()
 
      end)
